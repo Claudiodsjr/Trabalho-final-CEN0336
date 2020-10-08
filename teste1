@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+import sys
+import math
+
+if sys.argv[1].isdigit() == True and sys.argv[2].isdigit() == True and sys.argv[3].isdigit() == True and sys.argv[4].isdigit() == True:
+	print('Os valores são numéricos!')
+	vi1 = float(sys.argv[1])
+	vi2 = float(sys.argv[2])
+	vi3 = float(sys.argv[3])
+	vi4 = float(sys.argv[4])
+	if 0 <= vi1 < 200 and 0 <= vi2 < 200 and 0 <= vi3 < 200 and 0 <= vi4 < 200:
+		print('Os valores estão corretos, são positivos e menores que o valor teto (200).')
+		print('Incidência atual:')
+		ia1 = vi1/200
+		ia2 = vi2/200
+		ia3 = vi3/200
+		ia4 = vi4/200
+		print(ia1)
+		print(ia2)
+		print(ia3)
+		print(ia4)
+		print('Severidade atual do campo:')
+		sa1 = 0.05*ia1
+		sa2 = 0.05*ia2
+		sa3 = 0.05*ia3
+		sa4 = 0.05*ia4
+		print(round(sa1, 5))
+		print(round(sa2, 5))
+		print(round(sa3, 5))
+		print(round(sa4, 5))
+		print('Severidade atual do campo (%):')
+		print(round(sa1*100, 3))
+		print(round(sa2*100, 3))
+		print(round(sa3*100, 3))
+		print(round(sa4*100, 3))
+	else:
+		print('Os valores colocados superam o teto ou são negativos, é necessário revisar e tentar novamente')
+else:
+	print('Os valores adicionados não são numérios.')
+
